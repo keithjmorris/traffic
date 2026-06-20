@@ -16,6 +16,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 
+  <!-- App icon -->
+<link rel="icon" type="image/png" href="30.png" />
+<link rel="apple-touch-icon" href="30.png" />
+
   <style>
     :root {
       --blue:      #2979FF;
@@ -347,7 +351,7 @@
 
   <script>
 
-    const BIN_URL = 'https://api.jsonbin.io/v3/b/67d5e4d88960c979a5724247';
+    const BIN_URL = 'https://raw.githubusercontent.com/keithjmorris/traffic-data/refs/heads/main/traffic.json';
     let allPeriods = [];
     let currentPeriod = null;
     let currentChart = null;
@@ -375,7 +379,7 @@
       try {
         const response = await fetch(BIN_URL);
         const json = await response.json();
-        allPeriods = json.record;
+        allPeriods = json;
         buildList();
       } catch (error) {
         document.getElementById('loading-message').textContent =
