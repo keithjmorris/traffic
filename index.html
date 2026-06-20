@@ -36,20 +36,22 @@
       background: var(--bg);
       min-height: 100vh;
       color: var(--text);
+      -webkit-font-smoothing: antialiased;
     }
 
     /* ── HEADER ── */
     .header {
       text-align: center;
-      padding: 28px 16px 8px;
+      padding: 36px 16px 28px;
     }
     .header h1 {
-      font-size: 24px;
+      font-size: 28px;
       font-weight: 700;
+      letter-spacing: -0.3px;
       color: var(--blue);
     }
     .header h2 {
-      font-size: 16px;
+      font-size: 17px;
       font-weight: 400;
       color: #555;
       margin-top: 2px;
@@ -62,24 +64,22 @@
 
     /* ── INTRO SCREEN ── */
     .intro-text {
-      background: white;
-      border-radius: 14px;
-      padding: 20px;
-      font-size: 15px;
-      line-height: 1.6;
+      padding: 22px 4px;
+      font-size: 16px;
+      line-height: 1.65;
       color: #333;
-      margin-bottom: 16px;
+      margin-bottom: 24px;
     }
-    .intro-text p { margin-bottom: 12px; }
+    .intro-text p { margin-bottom: 14px; }
     .intro-text p:last-child { margin-bottom: 0; }
 
     .sign-row {
       display: flex;
       justify-content: center;
-      gap: 24px;
-      margin: 8px 0 20px;
+      gap: 28px;
+      margin: 4px 0 28px;
     }
-    .sign-row img { height: 64px; width: auto; }
+    .sign-row img { height: 68px; width: auto; }
 
     /* ── BUTTONS ── */
     .btn {
@@ -98,16 +98,24 @@
     }
     .btn:hover { background: var(--blue-dark); }
     .btn.secondary {
-      background: white;
+      background: none;
       color: var(--blue);
-      border: 2px solid var(--blue);
+      border: none;
+      font-weight: 600;
+      padding: 12px;
     }
-    .btn.secondary:hover { background: #f0f4ff; }
+    .btn.secondary:hover { opacity: 0.7; }
     .btn.small {
       font-size: 14px;
       padding: 12px;
       margin-bottom: 10px;
     }
+    .btn.small.secondary {
+      background: white;
+      color: var(--blue);
+      border: 2px solid var(--blue);
+    }
+    .btn.small.secondary:hover { background: #f0f4ff; opacity: 1; }
 
     /* ── BACK BUTTON ── */
     .back-button {
